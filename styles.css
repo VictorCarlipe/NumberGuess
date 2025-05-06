@@ -1,0 +1,19 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;    
+}
+
+:root{
+    background: linear-gradient(
+        90deg, 
+        #60849b 25%,
+        #003153 100%
+    ) ;
+    
+    font: 400 1rem/1.10rem 'Outfit';
+}
+
+header{
+    font: 700 1rem/2.5rem 'Teko';
+}
