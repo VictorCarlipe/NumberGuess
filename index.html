@@ -18,7 +18,9 @@
 
     <main>
         <div class="container">
-            <p>Tente adivinhar um número gerado aleatoriamente entre 1 e 100.<br>Digite o número no campo abaixo e clique "Chutar" para verificar se seu palpite está correto.</p>
+            <p>Tente adivinhar um número gerado aleatoriamente entre 1 e 100.</p>
+            
+            <p>Digite o número no campo abaixo e clique "Chutar" para verificar se seu palpite está correto.</p>
     
             <div class="input-wrapper">
                 <label for="guess">Palpite</label>
@@ -26,9 +28,16 @@
                 <button type="button">Chutar</button>
             </div>
 
-            <p class="info"></p>
+            <p class="info">O número aleatório gerado é <span>maior</span> que <strong>14</strong></p>
 
-            <p class="attempts"></p>
+            <div>
+                <p><small>tentativa 4/10</small></p>
+                
+                <p>chutes anteriores</p>
+                <span class="more">14</span>
+                <span class="more">26</span>
+                <span class="less">91</span>
+            </div>
 
         </div>
     </main>
