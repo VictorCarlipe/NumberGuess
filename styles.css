@@ -1,3 +1,4 @@
+/*css reset*/
 *{
     padding: 0px;
     margin: 0px;
@@ -14,8 +15,14 @@
     font: 400 2rem/1rem 'Outfit';
 }
 
+
+/*estrutura da pagina*/
 body{
     width: 100vw;
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
 }
 
 header{
@@ -27,34 +34,8 @@ header{
     flex-direction: column;
 }
 
-main{
-    height: 8rem;
 
-    display: flex;
-    justify-content: center;
-}
-
-.container{
-    width: 17rem;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    
-    p+p {
-        margin-top: 0.5rem;
-    }
-}
-
-.input-wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-block: 1.5rem;
-    gap: 0.25rem;
-}
-
+/*estilização de componentes*/
 button{    
     font: 400 0.5rem/1rem 'Outfit';
 
@@ -91,4 +72,62 @@ input{
     }
 
     transition: all 0.5s;
+}
+
+
+/*classes de ambiente*/
+.container{
+    width: 17rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    
+    p+p {
+        margin-top: 0.5rem;
+    }
+}
+
+.input-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-block: 1.5rem;
+    gap: 0.25rem;
+}
+
+.attempts{
+    width: 5rem;
+    border: solid 3px #003153;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.info{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/*classes utilitárias*/
+.more{
+    color: #deb887;
+    &::before{
+        content: " ▲ ";
+    }
+}
+
+.less{
+    color: #a9a9a9;
+        &::before{
+            content: " ▼ ";
+        }
+}
+
+.disappear{
+    display: none;
 }
