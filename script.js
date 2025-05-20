@@ -14,9 +14,7 @@ let attempts    = 0;
 
 //validação com RegEx para permitir inserir apenas digitos
 iGuess.addEventListener("keydown", function(evt) {
-    if (!/^\d$/.test(evt.key) && 
-            !evt.key === "Backspace" &&
-            !evt.key === "Enter"){
+    if (!/^\d$/.test(evt.key) && !evt.key === "Backspace" && !evt.key === "Enter"){
         evt.preventDefault();
     }
 });
@@ -37,7 +35,9 @@ document.getElementById("send").addEventListener("click", (event)=>{
 
         iGuess.focus();
         bsend.textContent ="Chutar";
-        randomNumber = Math.round(Math.random() * 100);
+        randomNumber = Math.round(Math.random() * 100);        
+        dcontent.replaceChildren();
+
 
     }else{
 
@@ -58,21 +58,31 @@ document.getElementById("send").addEventListener("click", (event)=>{
             let messageGuess = document.createElement("strong");
             messageGuess.textContent = iGuess.value;
 
+            let attempt = document.createElement("p");
+            attempt.classList.add("less");
+            attempt.textContent = iGuess.value;
+
             pmessage.appendChild(messageAux);
             pmessage.appendChild(messageGuess);
+            dcontent.appendChild(attempt);
 
             iGuess.focus();
         }else if (iGuess.value < randomNumber){
             pmessage.textContent = "O número aleatório é";
             let messageAux = document.createElement("span");
             messageAux.textContent = "Maior que ";
-            messageAux.classList.add("more");
+            messageAux.classList.add("greater");
 
             let messageGuess = document.createElement("strong");
             messageGuess.textContent = iGuess.value;
 
+            let attempt = document.createElement("p");
+            attempt.classList.add("greater");
+            attempt.textContent = iGuess.value;
+
             pmessage.appendChild(messageAux);
             pmessage.appendChild(messageGuess);
+            dcontent.appendChild(attempt);
 
             iGuess.focus();
 

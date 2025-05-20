@@ -111,10 +111,16 @@ input{
     align-items: center;
 }
 
+.content{
+    display: flex;
+    align-items: flex-end;
+    
+    gap: 0.5rem;
+}
 
 
 /*classes utilitárias*/
-.more{
+.greater{
     color: #deb887;
     &::before{
         content: " ▲ ";
