@@ -10,7 +10,7 @@ Estrutura HTML:
   <li>Uma mensagem inicial explicando como o jogo funciona.</li>
   <li>Um campo de input para o jogador inserir seu palpite.</li>
   <li>Um botão com o texto "Chutar".</li>
-  <li>Uma tag <p> para exibir as mensagens do jogo (dicas, resultado, etc.).</li>
+  <li>Uma tag &ltp&gt para exibir as mensagens do jogo (dicas, resultado, etc.).</li>
 </ul>
 
 »Funcionalidades JavaScript:
